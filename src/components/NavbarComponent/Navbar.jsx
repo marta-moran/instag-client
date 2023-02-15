@@ -1,22 +1,22 @@
 import React from 'react'
-import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import Container from 'react-bootstrap/Container';
 import { Link } from 'react-router-dom';
+import { AiFillHome } from "react-icons/ai";
+import { AiOutlineSearch } from "react-icons/ai";
+import { AiFillPlusCircle } from "react-icons/ai";
+import { AiOutlineSmile } from "react-icons/ai";
+import './Navbar.css'
+
 
 function NavbarComponent() {
-  return (
-            <Navbar bg="dark" variant="dark">
-                <Container>
-                    <Navbar.Brand>Instag</Navbar.Brand>
-                    <Nav className="me-auto nav">
-                        <Link to="/">Home</Link>
-                        <Link to="/films">Explora</Link>
-                        <Link to="/series">Perfil</Link>
-                    </Nav>
-                </Container>
-            </Navbar>
-  )
+    return (
+        <Navbar bg="dark" variant="dark" fixed="bottom" style={{ justifyContent: 'space-between' }}>
+            <Link to="/"><AiFillHome size={40} color="white" /></Link>
+            <Link to="/search"><AiOutlineSearch size={40} color="white" /></Link>
+            <Link to="/upload"><AiFillPlusCircle size={40} color="white" /></Link>
+            <Link to="/profile"><AiOutlineSmile size={40} color="white" /></Link>
+        </Navbar>
+    )
 }
 
 export default NavbarComponent
