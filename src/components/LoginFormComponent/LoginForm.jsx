@@ -23,7 +23,6 @@ function LoginForm() {
             .login(user)
             .then((authToken) => {
                 storeToken(authToken)
-
                 authentication()
                 console.log("hola")
                 navigate('/');

@@ -47,7 +47,7 @@ function Upload() {
 
             {
                 selected && (
-                    <Details element={image}></Details>
+                    <Details image={image}></Details>
                 )
             }
         </>
