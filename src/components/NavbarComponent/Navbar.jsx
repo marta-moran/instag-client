@@ -12,7 +12,7 @@ function NavbarComponent() {
     return (
         <Navbar bg="dark" variant="dark" fixed="bottom" style={{ justifyContent: 'space-between' }}>
             <Link to="/"><AiFillHome size={40} color="white" /></Link>
-            <Link to="/search"><AiOutlineSearch size={40} color="white" /></Link>
+            <Link to="/explore"><AiOutlineSearch size={40} color="white" /></Link>
             <Link to="/upload"><AiFillPlusCircle size={40} color="white" /></Link>
             <Link to="/profile"><AiOutlineSmile size={40} color="white" /></Link>
         </Navbar>

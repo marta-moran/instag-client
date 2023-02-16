@@ -5,8 +5,8 @@ class AuthService extends InitAxios {
         super('auth')
     }
 
-    signup() {
-        return this.api.post('/signup').then(({ data }) => data)
+    signup(body) {
+        return this.api.post('/signup', body).then(({ data }) => data)
     }
 
     login(body) {
