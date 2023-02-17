@@ -6,7 +6,7 @@ class PostService extends InitAxios {
     }
 
     createPost(body) {
-        return this.api.get('/publishPost', body).then(({ data }) => data)
+        return this.api.post('/publishPost', body).then(({ data }) => data)
     }
 
     getAllPost(token) {

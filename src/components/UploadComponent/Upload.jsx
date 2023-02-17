@@ -29,7 +29,7 @@ function Upload() {
             {
                 !selected && (
                     <>
-                        <div className='upload-section'>
+                        <div className='upload-section mt-5'>
 
                             <label htmlFor="file-upload" className="custom-file-upload">
                                 Upload File
@@ -39,7 +39,7 @@ function Upload() {
                                 {image && <img src={image} alt="Uploaded file" />}
                             </div>
                         </div>
-                        <Button className='mt-5' onClick={handleShow}>OK</Button>
+                        <Button className='mt-5 mb-3' onClick={handleShow}>OK</Button>
                     </>
 
                 )

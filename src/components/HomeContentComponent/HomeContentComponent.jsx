@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import postService from '../../services/post.service'
 import { AuthContext } from '../../context/auth.context'
+import './HomeContentComponent.css'
+
 
 function HomeContentComponent() {
     const [posts, setPosts] = useState([])
@@ -17,16 +19,18 @@ function HomeContentComponent() {
         <div>
             {
                 posts.length ? (
-                    posts.map(post => (
-                        <div>
+                    posts.map((post, index) => (
+                        <div key={index} className="feed" > 
                             <h4>{post.author.name}</h4>
-                            <img src={post.image} />
+                            <div className="img-container">
+                                <img src={post.image} /> 
+                            </div>
                             <h5>{post.title}</h5>
-                            <h5>{post.description}</h5>
+                            <h5 className='mb-4'>{post.description}</h5>
                         </div>
                     ))
                 ) : (
-                    <h3>No tienes ningún post :(</h3>
+                    <h3>Aun no has subido ningún post 😣</h3>
                 )
             }
         </div>

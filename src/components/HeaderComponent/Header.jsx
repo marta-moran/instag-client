@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 function Header() {
   return (
-    <div className='mb-4 header'>
+    <div className='header'>
       <Link to='/'><h1>Instag</h1></Link>
     </div>
   )

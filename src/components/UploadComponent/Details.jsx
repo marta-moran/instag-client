@@ -5,39 +5,40 @@ import { BsArrowLeftCircle } from "react-icons/bs";
 import { Link } from 'react-router-dom';
 import postService from '../../services/post.service';
 import { AuthContext } from '../../context/auth.context';
-
+import { useNavigate } from 'react-router-dom'
 
 function Details({ image }) {
 
+    const navigate = useNavigate()
+
     const { storeToken, authentication, user } = useContext(AuthContext)
+
+    console.log(user)
 
     const [post, setPost] = useState({})
 
     const handleChange = (event) => {
         const { value, name } = event.target
-        setPost({ ...post, image, [name]: value, author: user.id });
+        setPost({ ...post, image, [name]: value, author: user._id });
     }
 
     useEffect(() => {
         console.log(user)
     }, [user])
 
+  
 
-    // const handleSubmit = (event) => {
-    //     event.preventDefault()
-
-    //     postService
-    //     .createPost(post)
-    //     .then(result => {
-    //         console.log(authentication())
-
-    //     })
-    // }
+    const handleSubmit = (event) => {
+        event.preventDefault()
+        postService.createPost(post)
+        .then(createdPost => 
+            navigate('/')
+        )}
 
     return (
         <div className='details'>
             <img src={image} className="details-image"></img>
-            <Form className='form-image'>
+            <Form className='form-image' onSubmit={handleSubmit}>
                 <Form.Group className="mb-3 mt-3" controlId="formBasicEmail">
                     <Form.Label>Título</Form.Label>
                     <Form.Control type="text" placeholder='Escribe un título' name='title' onChange={handleChange} />
