@@ -1,0 +1,10 @@
+.edit input {
+    border: none;
+    outline: none;
+    background: transparent;
+    border-bottom: 2px solid blueviolet;
+}
+
+.edit button {
+    border: none;
+}

@@ -25,6 +25,13 @@ class PostService extends InitAxios {
         return this.api.get(`/getOnePost/${id}`).then(({ data }) => data)
     }
 
+    deletePost(id) {
+        return this.api.delete(`/deletePost/${id}`).then(({ data }) => data)
+    }
+
+    editPost(id, body) {
+        return this.api.put(`/editPost/${id}`, body).then(({ data }) => data)
+    }
 
     static getInstance() {
         if (!this.instance) {
