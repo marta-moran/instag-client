@@ -13,7 +13,8 @@
     margin: 2.2em 0;
 }
 
-.feed h4, h5{
+.feed h4,
+h5 {
     text-align: start;
     margin-left: 2em;
 }
@@ -30,3 +31,6 @@
     margin-bottom: 0.6em;
 }
 
+.feed a {
+    color: black;
+}

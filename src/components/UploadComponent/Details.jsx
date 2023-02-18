@@ -11,9 +11,7 @@ function Details({ image }) {
 
     const navigate = useNavigate()
 
-    const { storeToken, authentication, user } = useContext(AuthContext)
-
-    console.log(user)
+    const { user } = useContext(AuthContext)
 
     const [post, setPost] = useState({})
 
@@ -23,17 +21,21 @@ function Details({ image }) {
     }
 
     useEffect(() => {
-        console.log(user)
-    }, [user])
+        console.log(post)
+    }, [post])
 
-  
+
 
     const handleSubmit = (event) => {
         event.preventDefault()
         postService.createPost(post)
-        .then(createdPost => 
-            navigate('/')
-        )}
+            .then(createdPost => {
+                console.log(createdPost)
+                navigate('/')
+            })
+            .catch(err => console.log(err))
+    }
+
 
     return (
         <div className='details'>

@@ -17,6 +17,14 @@ class PostService extends InitAxios {
         return this.api.get('/getAllPosts', { headers }).then(({ data }) => data)
     }
 
+    uploadPhoto(formData) {
+        return this.api.post('/fileUpload', formData).then(({ data }) => data)
+    }
+
+    getDetailsPhoto(id) {
+        return this.api.get(`/getOnePost/${id}`).then(({ data }) => data)
+    }
+
 
     static getInstance() {
         if (!this.instance) {

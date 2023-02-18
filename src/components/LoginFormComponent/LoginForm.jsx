@@ -43,7 +43,7 @@ function LoginForm() {
                     <Form.Label>Email o nombre de usuario</Form.Label>
                     <Form.Control type="email" onChange={handleInputChange} name="email" placeholder="Enter email" required />
                 </Form.Group>
-                <Form.Group className="mb-3 mt-5" controlId="formBasicPassword">
+                <Form.Group className="mb-3 mt-5">
                     <Form.Label>Contraseña</Form.Label>
                     <Form.Control type="password" placeholder="Password" onChange={handleInputChange} name="password" required />
                 </Form.Group>

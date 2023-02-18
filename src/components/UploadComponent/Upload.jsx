@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import './Upload.css'
 import Button from 'react-bootstrap/Button';
+import postService from '../../services/post.service';
 
 import Details from './Details';
 
@@ -10,13 +11,11 @@ function Upload() {
 
     const handleChange = (e) => {
         const file = e.target.files[0];
-        const reader = new FileReader();
+        const formData = new FormData()
+        formData.append('imageUrl', file)
 
-        reader.readAsDataURL(file);
-
-        reader.onload = () => {
-            setImage(reader.result);
-        };
+        postService.uploadPhoto(formData)
+            .then(url => setImage(url))
     }
 
     const handleShow = () => {

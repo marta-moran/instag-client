@@ -7,6 +7,7 @@ import SignupPage from '../../pages/SignUpPage/SignupPage';
 import UploadPage from '../../pages/UploadPage/UploadPage';
 import ExplorePage from '../../pages/ExplorePage/ExplorePage';
 import ProfilePage from '../../pages/ProfilePage/ProfilePage';
+import DetailsPage from '../../pages/DetailsPage/DetailsPage';
 
 function AppRoutes() {
     return (
@@ -17,6 +18,7 @@ function AppRoutes() {
             <Route path="/upload" element={<UploadPage />} />
             <Route path="/explore" element={<ExplorePage />} />
             <Route path="/profile" element={<ProfilePage />} />
+            <Route path="/details/:id" element={<DetailsPage />} />
         </Routes>
     )
 }

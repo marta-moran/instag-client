@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import postService from '../../services/post.service'
 import { AuthContext } from '../../context/auth.context'
 import './HomeContentComponent.css'
+import { Link } from 'react-router-dom'
 
 
 function HomeContentComponent() {
@@ -20,13 +21,15 @@ function HomeContentComponent() {
             {
                 posts.length ? (
                     posts.map((post, index) => (
-                        <div key={index} className="feed" > 
-                            <h4>{post.author.name}</h4>
-                            <div className="img-container">
-                                <img src={post.image} /> 
-                            </div>
-                            <h5>{post.title}</h5>
-                            <h5 className='mb-4'>{post.description}</h5>
+                        <div key={index} className="feed" >
+                            <Link to={`/details/${post._id}`}>
+                                <h4>{post.author.name}</h4>
+                                <div className="img-container">
+                                    <img src={post.image} />
+                                </div>
+                                <h5>{post.title}</h5>
+                                <h5 className='mb-4'>{post.description}</h5>
+                            </Link>
                         </div>
                     ))
                 ) : (
