@@ -45,7 +45,7 @@ function SignupForm() {
 
 
     return (
-        <div className='form'>
+        <div className='form mt-2'>
             <Form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
                 <Form.Group className="mb-5">
                     <Form.Label>Email</Form.Label>
