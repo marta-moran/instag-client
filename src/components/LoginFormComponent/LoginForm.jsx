@@ -2,7 +2,7 @@ import { useState, useContext } from 'react';
 import Form from 'react-bootstrap/Form';
 import authService from '../../services/auth.service'
 import { AuthContext } from '../../context/auth.context';
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import './Form.css'
 
 function LoginForm() {
@@ -51,6 +51,7 @@ function LoginForm() {
                     Entrar
                 </button>
             </Form>
+            <p className='mt-5'>¿No tienes cuenta? <Link to="/signup">Regístrate</Link></p>
         </div>
 
     )

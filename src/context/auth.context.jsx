@@ -1,15 +1,19 @@
 import { useEffect } from 'react';
 import { createContext, useState } from 'react';
 import authAxios from '../services/auth.service';
+import { useNavigate } from 'react-router-dom';
 
 export const AuthContext = createContext();
 
 const LOCALSTORAGE_TOKEN = 'tokenAuth';
 
+
 export const AuthProvider = (props) => {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [isLoading, setIsLoading] = useState(true);
     const [user, setUser] = useState(null);
+
+    const navigate = useNavigate()
 
     const storeToken = (token) => {
         localStorage.setItem(LOCALSTORAGE_TOKEN, token.authToken);
@@ -36,16 +40,19 @@ export const AuthProvider = (props) => {
                     setIsLoading(false);
                     setIsLoggedIn(false);
                 });
-        } else {
-            setUser(null);
-            setIsLoading(false);
-            setIsLoggedIn(false);
+        }
+
+        else if (location.pathname !== "/signup") {
+            console.log("hla")
+            navigate('/login')
         }
     }
 
     const logOut = () => {
         destroyToken();
-        authentication();
+        setUser(null);
+        setIsLoading(false);
+        setIsLoggedIn(false);
     }
 
     useEffect(() => {

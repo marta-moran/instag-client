@@ -33,6 +33,10 @@ class PostService extends InitAxios {
         return this.api.put(`/editPost/${id}`, body).then(({ data }) => data)
     }
 
+    explorerPost() {
+        return this.api.get('/explorerPost').then(({ data }) => data)
+    }
+
     static getInstance() {
         if (!this.instance) {
             this.instance = new PostService()

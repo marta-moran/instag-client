@@ -13,18 +13,17 @@
     margin: 2.2em 0;
 }
 
-.feed h4,
-h5 {
+.feed h5 {
     text-align: start;
     margin-left: 2em;
 }
 
-.feed h4 {
+/* .feed h4 {
     font-size: 1.6em;
     font-weight: 700;
     color: rgb(52, 52, 52);
     margin-bottom: 0.6em;
-}
+} */
 
 .feed h5 {
     font-size: 1.3em;
@@ -33,4 +32,12 @@ h5 {
 
 .feed a {
     color: black;
+}
+
+.avatar h4 {
+    margin-left: 0.5em;
+}
+
+.avatar div {
+    margin-left: 0.5em;
 }

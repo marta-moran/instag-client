@@ -45,7 +45,7 @@ function Details() {
 
     const handleSubmit = (event) => {
         event.preventDefault()
-        postService.editPost(post)
+        postService.editPost(id, post)
             .then(updatedPost => {
                 console.log("POSTTTTTTTTTTTTTTTTTTT", post)
                 setPost(updatedPost)
