@@ -25,7 +25,6 @@ function LoginForm() {
             .then((authToken) => {
                 storeToken(authToken)
                 authentication()
-                console.log("hola")
                 navigate('/');
             })
             .catch((response) => {
@@ -38,7 +37,7 @@ function LoginForm() {
         <div className='form' onSubmit={handleSubmit}>
             <Form>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
-                    <Form.Label>Email o nombre de usuario</Form.Label>
+                    <Form.Label>Email</Form.Label>
                     <Form.Control type="email" onChange={handleInputChange} name="email" placeholder="Enter email" required />
                 </Form.Group>
                 <Form.Group className="mb-3 mt-5">

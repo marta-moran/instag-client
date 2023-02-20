@@ -30,7 +30,6 @@ function Details() {
     const handleClickDelete = () => {
         postService.deletePost(id)
             .then(deletedPost => {
-                console.log("borrado")
                 navigate('/')
 
             })
@@ -48,7 +47,6 @@ function Details() {
         event.preventDefault()
         postService.editPost(id, post)
             .then(updatedPost => {
-                console.log("POSTTTTTTTTTTTTTTTTTTT", post)
                 setPost(updatedPost)
                 navigate('/')
             })

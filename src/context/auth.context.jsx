@@ -35,7 +35,6 @@ export const AuthProvider = (props) => {
                     setIsLoggedIn(true);
                 })
                 .catch((err) => {
-                    console.log(err);
                     setUser(null);
                     setIsLoading(false);
                     setIsLoggedIn(false);
@@ -43,7 +42,6 @@ export const AuthProvider = (props) => {
         }
 
         else if (location.pathname !== "/signup") {
-            console.log("hla")
             navigate('/login')
         }
     }

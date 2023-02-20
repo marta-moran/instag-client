@@ -12,7 +12,6 @@ function Explorer() {
   useEffect(() => {
     postService.explorerPost()
       .then(allPosts => {
-        console.log(allPosts.posts)
         setPosts(allPosts.posts)
       })
   }, [])

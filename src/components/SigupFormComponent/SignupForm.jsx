@@ -24,7 +24,6 @@ function SignupForm() {
 
         postService.uploadPhoto(formData)
             .then(url => {
-                console.log(url)
                 setImage(url)
             })
             .catch(response => console.log(response))
@@ -64,8 +63,8 @@ function SignupForm() {
                     <Form.Control type="password" placeholder="Password" name='password' onChange={handleChange} />
                 </Form.Group>
                 <input id="file-upload" type="file" name="avatar" onChange={uploadPhoto} />
-                <button className='button mt-5' type="submit" style={{ color: 'white' }}>
-                    Entrar
+                <button className='button mt-5' type="submit">
+                    Regístrate
                 </button>
                 <Link to='/login' className='mt-2'>Atrás</Link>
             </Form>

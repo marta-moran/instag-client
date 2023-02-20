@@ -15,7 +15,6 @@ function Profile() {
         postService
             .getAllPost(localStorage.getItem('tokenAuth'))
             .then(userPosts => setPosts(userPosts))
-        console.log(user)
     }, [user])
 
     return (
