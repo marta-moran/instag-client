@@ -29,10 +29,7 @@ function LoginForm() {
                 navigate('/');
             })
             .catch((response) => {
-                // console.log(response)
-                if (response.code === "ERR_BAD_RESPONSE") {
-                    setError(true)
-                }
+                setError(true)
             })
 
     }
