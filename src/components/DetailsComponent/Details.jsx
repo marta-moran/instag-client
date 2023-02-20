@@ -67,7 +67,7 @@ function Details() {
 
     return (
         <>
-            <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
+            <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center', margin: '2em 0 1em 3em' }}>
                 <Avatar src={post.author.avatar}></Avatar>
                 <h4 className='mt-3'>{post.author.name}</h4>
             </div>
