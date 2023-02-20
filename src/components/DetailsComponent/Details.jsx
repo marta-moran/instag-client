@@ -63,10 +63,11 @@ function Details() {
             })
             .catch(err => console.log(err))
     }, [])
-    console.log(post)
+    console.log("HOLA -------------", post)
 
     return (
         <>
+            {/* <Avatar src={post.author.avatar}></Avatar> */}
             <h4 className='mt-3'>{post.author.name}</h4>
             <img src={post.image} width="65%-"></img>
             {
