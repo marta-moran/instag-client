@@ -30,6 +30,11 @@
     margin-bottom: 0.6em;
 }
 
+.feed p {
+    font-size: 1.2em;
+    font-weight: 300;
+}
+
 .feed a {
     color: black;
 }

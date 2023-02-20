@@ -88,7 +88,7 @@ function Details() {
                     :
                     <>
                         <h5 className='text-center'>{post.title}</h5>
-                        <h5 className='text-center'>{post.description}</h5>
+                        <p className='text-center'>{post.description}</p>
                     </>
             }
 
