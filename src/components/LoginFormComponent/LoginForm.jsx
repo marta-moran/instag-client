@@ -11,6 +11,7 @@ function LoginForm() {
 
     const [user, setUser] = useState({});
     const { storeToken, authentication } = useContext(AuthContext)
+    const [error, setError] = useState(false)
 
     const handleInputChange = (event) => {
         const { value, name } = event.target
@@ -52,6 +53,11 @@ function LoginForm() {
                 </button>
             </Form>
             <p className='mt-5'>¿No tienes cuenta? <Link to="/signup">Regístrate</Link></p>
+            {
+                error && (
+                    <h3 style={{ color: 'red' }}>Email y/o contraseña no válido</h3>
+                )
+            }
         </div>
 
     )
