@@ -67,7 +67,7 @@ function Details() {
 
     return (
         <>
-            {/* <Avatar src={post.author.avatar}></Avatar> */}
+            <Avatar src={post.author.avatar}></Avatar>
             <h4 className='mt-3'>{post.author.name}</h4>
             <img src={post.image} width="65%-"></img>
             {
