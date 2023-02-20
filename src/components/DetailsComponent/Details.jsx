@@ -18,7 +18,7 @@ function Details() {
     const { user } = useContext(AuthContext)
     const [post, setPost] = useState(
         {
-            author: { name: '' },
+            author: { name: '', avatar: '' },
             image: '',
             title: '',
             description: ''
@@ -64,6 +64,8 @@ function Details() {
             .catch(err => console.log(err))
     }, [])
     console.log("HOLA -------------", post)
+    console.log("HOLA -------------", post.author.avatar)
+
 
     return (
         <>
