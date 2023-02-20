@@ -18,7 +18,7 @@ function Details() {
     const { user } = useContext(AuthContext)
     const [post, setPost] = useState(
         {
-            author: { name: '', avatar },
+            author: { name: '', avatar: '' },
             image: '',
             title: '',
             description: ''
