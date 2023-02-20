@@ -6,7 +6,7 @@ Si se quisiera probar el proyecto en local es importante instalar las dependenci
 
     $ npm install
     
-además de cambiar la variable de entorno REACT_APP_API_URL con la url localhost del servidor
+además de cambiar la variable de entorno REACT_APP_API_URL con la url localhost del servidor. Se puede probar la aplicación con el email **f5@factoria.com** y la contraseña **hola123**
 
 ## ENDPOINTS
 | URL path                    | Descripción |
