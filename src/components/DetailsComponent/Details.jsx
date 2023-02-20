@@ -63,14 +63,14 @@ function Details() {
             })
             .catch(err => console.log(err))
     }, [])
-    console.log("HOLA -------------", post)
-    console.log("HOLA -------------", post.author.avatar)
 
 
     return (
         <>
-            <Avatar src={post.author.avatar}></Avatar>
-            <h4 className='mt-3'>{post.author.name}</h4>
+            <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
+                <Avatar src={post.author.avatar}></Avatar>
+                <h4 className='mt-3'>{post.author.name}</h4>
+            </div>
             <img src={post.image} width="65%-"></img>
             {
                 edit ?
