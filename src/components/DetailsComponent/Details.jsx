@@ -6,6 +6,7 @@ import { FiTrash2 } from "react-icons/fi";
 import { FiX } from "react-icons/fi";
 import { FiCheck } from "react-icons/fi";
 import './Details.css'
+import Avatar from '@mui/material/Avatar';
 
 
 import { AuthContext } from '../../context/auth.context'
@@ -17,7 +18,7 @@ function Details() {
     const { user } = useContext(AuthContext)
     const [post, setPost] = useState(
         {
-            author: { name: '' },
+            author: { name: '', image },
             image: '',
             title: '',
             description: ''
@@ -66,6 +67,7 @@ function Details() {
 
     return (
         <>
+            <Avatar src={post.author.image}></Avatar>
             <h4 className='mt-3'>{post.author.name}</h4>
             <img src={post.image} width="65%-"></img>
             {
