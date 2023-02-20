@@ -10,6 +10,7 @@ function SignupForm() {
     const navigate = useNavigate()
     const [user, setUser] = useState({})
     const [image, setImage] = useState("")
+    const [error, setError] = useState(false)
 
     const handleChange = (event) => {
         const { name, value } = event.target
@@ -26,6 +27,9 @@ function SignupForm() {
                 console.log(url)
                 setImage(url)
             })
+            .catch(response => console.log(response))
+
+
     }
 
     const handleSubmit = (event) => {
@@ -34,7 +38,7 @@ function SignupForm() {
         authAuxios
             .signup(user)
             .then(response => navigate('/login'))
-            .catch(response => console.log(response))
+            .catch(response => setError(true))
 
     }
 
@@ -65,6 +69,11 @@ function SignupForm() {
                 </button>
                 <Link to='/login' className='mt-2'>Atrás</Link>
             </Form>
+            {
+                error && (
+                    <p style={{ color: 'red' }}>Email y/o contraseña no válido</p>
+                )
+            }
         </div>
     )
 }
