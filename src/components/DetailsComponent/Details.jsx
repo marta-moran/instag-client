@@ -18,7 +18,7 @@ function Details() {
     const { user } = useContext(AuthContext)
     const [post, setPost] = useState(
         {
-            author: { name: '', avatar: '' },
+            author: { name: '' },
             image: '',
             title: '',
             description: ''
@@ -67,7 +67,6 @@ function Details() {
 
     return (
         <>
-            <Avatar src={post.author.avatar}></Avatar>
             <h4 className='mt-3'>{post.author.name}</h4>
             <img src={post.image} width="65%-"></img>
             {
